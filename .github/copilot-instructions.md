@@ -1,4 +1,0 @@
-- [x] Create Python workspace files for AWS EC2 IB trading bot.
-- [x] Include bot source modules for config, IB client, strategy, execution, and level 2 confirmation.
-- [x] Provide startup instructions in README.
-- [x] Keep the project scaffold minimal and focused on the first implementation stage.
