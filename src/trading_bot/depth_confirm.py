@@ -1,8 +1,10 @@
 import logging
-from typing import Dict, Optional
+from typing import TYPE_CHECKING, Dict, Optional
 
 from trading_bot.config import BotConfig
-from trading_bot.strategy import OpeningRange
+
+if TYPE_CHECKING:
+    from trading_bot.strategy import OpeningRange
 
 logger = logging.getLogger("trading_bot.depth_confirm")
 
@@ -12,7 +14,7 @@ class Level2Confirm:
         self.config = config
         self.last_depth: Optional[Dict] = None
 
-    def validate_entry_side(self, opening_range: OpeningRange, entry_price: float) -> bool:
+    def validate_entry_side(self, opening_range: "OpeningRange", entry_price: float) -> bool:
         logger.info("Validating entry side using level 2 confirmation")
         if self.last_depth is None:
             logger.warning("No level 2 depth data available. Defaulting to accept trade.")
