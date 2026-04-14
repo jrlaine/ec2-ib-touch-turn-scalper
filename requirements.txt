@@ -1,0 +1,5 @@
+ib_insync>=1.12.0
+pandas>=2.0.0
+numpy>=1.26.0
+boto3>=1.30.0
+python-dateutil>=2.8.0
